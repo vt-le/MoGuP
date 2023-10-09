@@ -1,8 +1,8 @@
 # MoGuP
 
-This repository is the official implementation of [MoGuP]().
+This repository is the official implementation of [MoGuP](https://moguprediction.github.io/).
 
-**[MoGuP: Motion-Guided Prediction for Video Anomaly Detection]()**
+**[MoGuP: Motion-Guided Prediction for Video Anomaly Detection](https://moguprediction.github.io/)**
 <br/>
 [Viet-Tuan Le](https://vt-le.github.io/), 
 [Yong-Guk Kim](http://home.sejong.ac.kr/~ykim/)
@@ -53,9 +53,9 @@ Once the training is done, run inference:
   <td style="text-align:center;"><b>CUHK Avenue</b></td>
 </tr>
 <tr>
-  <td><img src="static/images/fig_introduction_error_comparation_ped2.png"></td>
-  <td><img src="static/images/fig_introduction_error_comparation_avenue.png"></td>
-  <td><img src="static/images/fig_introduction_error_comparation_shanghaitech.png"></td>
+  <td><img src="https://github.com/MoGuPrediction/MoGuPrediction.github.io/blob/main/static/images/fig_introduction_error_comparation_ped2.png"></td>
+  <td><img src="https://github.com/MoGuPrediction/MoGuPrediction.github.io/blob/main/static/images/fig_introduction_error_comparation_avenue.png"></td>
+  <td><img src="https://github.com/MoGuPrediction/MoGuPrediction.github.io/blob/main/static/images/fig_introduction_error_comparation_shanghaitech.png"></td>
 </tr>
 </table>
 
@@ -65,7 +65,7 @@ If you make use of our work, please cite our paper.
 ```bibtex
 @article{le2024mogup,
     title={MoGuP: Motion-guided Prediction for Video Anomaly Detection},
-    author={Le, Viet-Tuan and Kim, Yong-Gul},
+    author={Le, Viet-Tuan and Kim, Yong-Guk},
     journal={IEEE Transactions on Circuits and Systems for Video Technology},
     year={2024}
 }
