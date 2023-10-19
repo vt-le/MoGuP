@@ -13,8 +13,8 @@ This repository is the official implementation of [MoGuP](https://moguprediction
 
 ## News
 
-- [XX/XX/2024] Pre-trained MoGuP models are available on [Hugging Face Library](https://huggingface.co/)!
-- [XX/XX/2024] Code released!
+- [XX/XX/2023] Pre-trained MoGuP models are available on [Hugging Face Library](https://huggingface.co/)!
+- [XX/XX/2023] Code released!
 
 ## Setup
 
