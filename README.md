@@ -13,8 +13,10 @@ This repository is the official implementation of [MoGuP](https://moguprediction
 
 ## News
 
-- [XX/XX/2023] Pre-trained MoGuP models are available on [Hugging Face Library](https://huggingface.co/)!
-- [XX/XX/2023] Code released!
+- [11/24/2023] Pre-trained MoGuP models are released!
+<!--
+- [XX/XX/2024] Code released!)
+-->
 
 ## Setup
 
@@ -24,26 +26,97 @@ This repository is the official implementation of [MoGuP](https://moguprediction
 pip install -r requirements.txt
 ```
 
-### Weights
+We evaluate `MoGuP` on:
+| Dataset | Link                                                                                  |
+|--|---------------------------------------------------------------------------------------|
+| UCSD Ped2 | [![Google drive](https://badgen.net/static/Homepage/Ped2/blue)](http://www.svcl.ucsd.edu/projects/anomaly/dataset.html) |
+| CUHK Avenue | [![Google drive](https://badgen.net/badge/Homepage/Avenue/cyan)](http://www.cse.cuhk.edu.hk/leojia/projects/detectabnormal/dataset.html) |
+| ShanghaiTech | [![Google drive](https://badgen.net/badge/Homepage/ShanghaiTech/green?)](https://svip-lab.github.io/dataset/campus_dataset.html) |
 
-**[PVTv2]** [PVT](https://github.com/whai362/PVT).. 
+A dataset is a directory with the following structure:
+  ```bash
+  $ tree data
+  ped2/avenue
+  ├── training
+  │   └── frames
+  │       ├── ${video_1}$
+  │       │   ├── 000.jpg
+  │       │   ├── 001.jpg
+  │       │   └── ...
+  │       ├── ${video_2}$
+  │       │   ├── 00.jpg
+  │       │   └── ...
+  │       └── ...
+  ├── testing
+  │   └── frames
+  │       ├── ${video_1}$
+  │       │   ├── 000.jpg
+  │       │   ├── 001.jpg
+  │       │   └── ...
+  │       ├── ${video_2}$
+  │       │   ├── 000.jpg
+  │       │   └── ...
+  │       └── ...
+  └── ped2/avenue.mat
+  
+  shanghaitech
+  ├── training
+  │   └── frames
+  │       ├── ${video_1}$
+  │       │   ├── 000.jpg
+  │       │   ├── 001.jpg
+  │       │   └── ...
+  │       ├── ${video_2}$
+  │       │   ├── 00.jpg
+  │       │   └── ...
+  │       └── ...
+  ├── testing
+  │   └── frames
+  │       ├── ${video_1}$
+  │       │   ├── 000.jpg
+  │       │   ├── 001.jpg
+  │       │   └── ...
+  │       ├── ${video_2}$
+  │       │   ├── 000.jpg
+  │       │   └── ...
+  │       └── ...
+  └── test_frame_mask
+      ├── 01_0014.npy
+      ├── 01_0015.npy
+      └── ...  
+  ```
 
+## Data preprocessing
+- Object detecion: [Cascade R-CNN](https://github.com/open-mmlab/mmaction2)
+- Extracting optical flow frames: [FlowNet2.0](https://github.com/NVIDIA/flownet2-pytorch)
+
+
+## Evaluation
+Please first download the pre-trained model
+
+| Dataset | Pretrained Model                                                                                  |
+|--|---------------------------------------------------------------------------------------|
+| UCSD Ped2 | [![Google drive](https://badgen.net/static/Link/Ped2/blue?icon=chrome)](https://drive.google.com/drive/folders/1Jq8vEGS9eEV2a6rK3TmjhUKcbbbuLcYd?usp=sharing) |
+| CUHK Avenue | [![Google drive](https://badgen.net/badge/Link/Avenue/blue?icon=chrome)](https://drive.google.com/drive/folders/1UxPg9u6Bmhh5YBMfU31Gj4BZmL-ghIeq?usp=sharing) |
+| ShanghaiTech | [![Google drive](https://badgen.net/badge/Link/ShanghaiTech/blue?icon=chrome)](https://drive.google.com/drive/folders/1Jq8vEGS9eEV2a6rK3TmjhUKcbbbuLcYd?usp=sharing) |
 
 ## Usage
 
 ### Training
 
-```python
-...
-```
+```bash
+ python hybrid_train.py \
+    --cfg <path/to/config/file>
+```   
 
-### Inference
+### Evaluation
 
 Once the training is done, run inference:
 
-```python
-...
-```
+```bash
+ python hybrid_eval.py \
+    --cfg <path/to/config/file>
+``` 
 
 ## Visualization
 
@@ -66,7 +139,5 @@ If you make use of our work, please cite our paper.
 @article{le2024mogup,
     title={MoGuP: Motion-guided Prediction for Video Anomaly Detection},
     author={Le, Viet-Tuan and Kim, Yong-Guk},
-    journal={IEEE Transactions on Circuits and Systems for Video Technology},
-    year={2024}
 }
 ```
