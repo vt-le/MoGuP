@@ -1,6 +1,6 @@
 # MoGuP
 
-This repository is the official implementation of [MoGuP](https://moguprediction.github.io/).
+This repository is the official implementation of [MoGuP](https://moguprediction.github.io/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fvt-le%2FMoGuP&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com).
 
 **[MoGuP: Motion-Guided Prediction for Video Anomaly Detection](https://moguprediction.github.io/)**
 <br/>
